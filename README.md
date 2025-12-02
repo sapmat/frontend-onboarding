@@ -20,10 +20,11 @@ This exercise is designed to introduce you step-by-step to the fundamentals of `
 - [Level 5 – Application Storage](#level-5)
 - [Level 6 – JWT](#level-6)
 - [Level 7 – Mock API](#level-7)
-- [Level 8 – Table Data](#level-8)
-- [Level 9 – Modal](#level-9)
-- [Level 10 – Store (Redux)](#level-10)
-- [Level 11 – Context](#level-11)
+- [Level 8 – Custom Hooks](#level-8)
+- [Level 9 – Table Data](#level-9)
+- [Level 10 – Modal](#level-10)
+- [Level 11 – Store (Redux)](#level-11)
+- [Level 12 – Context](#level-12)
 
 ---
 
@@ -112,8 +113,8 @@ TODO:
 
 ## <a id="level-7"></a> LEVEL 7 – MOCK API
 
-Your project will revolve around `events`.  
-Since there's no backend, you'll build a simple mock API.
+Your project will revolve around `events`  
+Since there's no backend, you'll build a simple mock API
 
 > [!NOTE]
 >
@@ -139,7 +140,17 @@ TODO:
 
 ---
 
-## <a id="level-8"></a> LEVEL 8 – TABLE DATA
+## <a id="level-8"></a> LEVEL 8 – CUSTOM HOOKS
+
+In `React` you can create your own hooks which will be annotated by using the word `use` before the hook name, like there is `useState` and `useEffect`
+
+TODO:
+
+- Create a custom hook that will manage doing api calls
+
+---
+
+## <a id="level-9"></a> LEVEL 9 – TABLE DATA
 
 Here you will learn about how to create a table that will allow you to display the `events`
 
@@ -160,7 +171,7 @@ TODO:
 
 ---
 
-## <a id="level-9"></a> LEVEL 9 – MODAL
+## <a id="level-10"></a> LEVEL 10 – MODAL
 
 Modal are an essential part of `frontend development`, they allow you to display a card above the rest of the screen and force the user to interact with it
 
@@ -182,7 +193,7 @@ TODO:
 
 ---
 
-## <a id="level-10"></a> LEVEL 10 – STORE (REDUX)
+## <a id="level-11"></a> LEVEL 11 – STORE (REDUX)
 
 `Stores` in `frontend development` are very important, they allow you to access states on a **global** level in your system
 
@@ -202,9 +213,9 @@ TODO:
 
 ---
 
-## <a id="level-11"></a> LEVEL 11 – Context
+## <a id="level-12"></a> LEVEL 12 – Context
 
-`Contexts` in `frontend development` allow you to wrap components and have states that can be used from anywhere within those components  
+`Contexts` in `React` allow you to wrap components and have states that can be used from anywhere within those components  
 As you might have guessed, the `Store` from `level 10` is also a type of context
 
 The in order to use the `context`, you need to wrap the components you want with it's `provider`  
