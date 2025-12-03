@@ -213,7 +213,7 @@ TODO:
 
 ---
 
-## <a id="level-12"></a> LEVEL 12 – Context
+## <a id="level-12"></a> LEVEL 12 – CONTEXT
 
 `Contexts` in `React` allow you to wrap components and have states that can be used from anywhere within those components  
 As you might have guessed, the `Store` from `level 10` is also a type of context
