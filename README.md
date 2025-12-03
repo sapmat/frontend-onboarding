@@ -9,6 +9,11 @@ This exercise is designed to introduce you step-by-step to the fundamentals of `
 > - This does not cover everything about `frontend development`, but it will give you enough understanding to begin creating your own features and improving independently
 > - This is just exercises to learn how to develop from a more hands on point of view, if you want more in depth explanation feel free to do your own research
 
+> [!IMPORTANT]
+>
+> This exercise is meant to be completed using the `React` framework
+> If you choose to work with another framework such as `Vue` or `Angular`, make sure you understand the equivalent concepts and how to implement them there
+
 ---
 
 ## LEVELS NAVIGATION
