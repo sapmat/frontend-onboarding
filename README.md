@@ -36,7 +36,7 @@ This exercise is designed to introduce you step-by-step to the fundamentals of `
 
 ## <a id="level-1"></a> LEVEL 1 – START
 
-We will begin very simple by creating a login page.
+We will begin very simple by creating a login page
 
 TODO:
 
@@ -50,11 +50,11 @@ TODO:
 
 ## <a id="level-2"></a> LEVEL 2 – STATES
 
-React provides hooks like `useState` to easily handle component state.
+React provides hooks like `useState` to easily handle component state
 
 TODO:
 
-- Create a mock data file containing a few users
+- Create a mock data file containing a few `users` (think what fields each `user` might need)
 - Using `useState`, when the `submit` button is clicked:
   - If login data matches a user in mock data show success message
   - Otherwise show error message
@@ -64,7 +64,7 @@ TODO:
 
 ## <a id="level-3"></a> LEVEL 3 – STYLING (EMOTION)
 
-Now add styling using Emotion.
+Now add styling using Emotion
 
 TODO:
 
@@ -75,7 +75,7 @@ TODO:
 
 ## <a id="level-4"></a> LEVEL 4 – ROUTES
 
-Create a second page in your application and navigate between pages.
+Create a second page in your application and navigate between pages
 
 TODO:
 
@@ -135,8 +135,8 @@ TODO:
   - attendees[]:
     - id
     - rating
-- Create a service file for each mock data file.
-- Create a function to validate `user` credentials during login.
+- Create a service file for each mock data file
+- Create a function to validate `user` credentials during login
 
 ---
 
@@ -176,7 +176,7 @@ TODO:
 Modal are an essential part of `frontend development`, they allow you to display a card above the rest of the screen and force the user to interact with it
 
 So now that you have a way to display all the future `events`, you might want to view each `event` in more details  
-Also, you may want to view all the events that you want to attend/attended, or the ones that you are hosting
+Also, you may want to view all the `events` that you want to attend/attended, or the ones that you are hosting
 
 TODO:
 
@@ -186,7 +186,7 @@ TODO:
   - If the host of the `event` is the user then add an `Edit` button that will enter you into an editing state and there the user can edit the information (think if there could be stuff that he can't edit), and save or cancel the new changes
   - If the host of the `event` is the user then add a `Delete` button that will open another modal that will ask you if you are sure that you want to delete the `event`
 - Add a `Schedule` page, and add to it the following:
-  - The user will have a table like the one in `level 8` but this time it will display `events` related specifically to the user
+  - The user will have a table like the one in [`level 9`](#level-9) but this time it will display `events` related specifically to the user
   - Add a button to switch between the `events` that are hosted by the user, the `events` that he is wants to attend, or both
   - Add a filter bar to filter the `events`
   - Add an `Add Event` button which will open a modal and allow you to create a new `event`
@@ -208,7 +208,7 @@ TODO:
 
 TODO:
 
-- Read about `Redux` and add a store to your system that will hold the information of the connected user
+- Read about `Redux` and add a store to your system that will hold the information of the `connected user`
 - Create a store that will hold some of the `events`, think what is the most accurate way to do it while keeping in mind the warning above
 
 ---
@@ -216,7 +216,7 @@ TODO:
 ## <a id="level-12"></a> LEVEL 12 – CONTEXT
 
 `Contexts` in `React` allow you to wrap components and have states that can be used from anywhere within those components  
-As you might have guessed, the `Store` from `level 10` is also a type of context
+As you might have guessed, the `Store` from [`level 11`](#level-11) is also a type of context
 
 The in order to use the `context`, you need to wrap the components you want with it's `provider`  
 When creating the provider, you can also add components that will automatically be added when you call it
