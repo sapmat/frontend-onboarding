@@ -49,7 +49,10 @@ TODO:
   - An input for email
   - An input for password
   - A submit button
-- No hooks, no styling yet
+
+> [!NOTE]
+>
+> No hooks, no styling yet
 
 ---
 
