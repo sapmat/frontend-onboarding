@@ -32,14 +32,15 @@ This exercise is designed to introduce you step-by-step to the fundamentals of `
 - [Level 8 – Custom Hooks](#level-8)
 - [Level 9 – Table Data](#level-9)
 - [Level 10 – Modal](#level-10)
-- [Level 11 – Store (Redux)](#level-11)
-- [Level 12 – Context](#level-12)
+- [Level 11 – React Query](#level-11)
+- [Level 12 – Store (Redux)](#level-12)
+- [Level 13 – Context](#level-13)
 
 ---
 
 > [!WARNING]
 >
-> Make sure that stuff are responsive to some extent, you will not be tested on it too much because you will not be using any special UI libraries that will help, but do make sure that it has a basic responsivity
+> Make sure that stuff are responsive to some extent, you will not be tested on it too much because you will not be using any special UI libraries that will help, but do make sure that it has a basic responsively
 
 > [!NOTE]
 >
@@ -52,7 +53,6 @@ This exercise is designed to introduce you step-by-step to the fundamentals of `
 Every good project has to start from somewhere, so we will start simple and grow our project with each level.
 
 The goal for this level is simply to get comfortable creating components and rendering inputs.
-
 
 TODO:
 
@@ -117,7 +117,7 @@ So now that we created the ability to log into the site, we will practice rememb
 
 TODO:
 
-- Read about different types of `application storage` and store in it the connected `user` data (think what data should and shouldn't be saved)
+- Read about different types of `application storage` and store in it the connected `user` data (think what data should and shouldn't be saved) and where it should be saved
 - Add to `Login` a `remember me` button that will remember the `user` for 30 days before forgetting him
 - If the user is not logged in, automatically redirect him to the `Login` page
 
@@ -228,7 +228,35 @@ TODO:
 
 ---
 
-## <a id="level-11"></a> LEVEL 11 – STORE (REDUX)
+## <a id="level-11"></a> LEVEL 11 – REACT QUERY
+
+`React Query` (TanStack Query) is a powerful library for managing `server state` in `React` applications. Unlike client state (which we manage with `useState` or `Redux`), server state is data that lives on a remote server and can become outdated, needs to be fetched, cached, synchronized, and updated.
+
+`React Query` handles all of this for us, providing features like automatic caching, background refetching, stale data management, and optimistic updates — without having to write all that logic manually.
+
+> [!NOTE]
+>
+> - `React Query` replaces the need for most custom data-fetching hooks and manual loading/error state management
+> - It is not a replacement for `Redux` — `Redux` handles client/global state, while `React Query` handles server/remote state
+
+TODO:
+
+- Read about `React Query` and install `@tanstack/react-query` in your project
+- Set up a `QueryClientProvider` at the root of your application
+- Refactor your existing API calls (from the custom hook in [`level 8`](#level-8)) to use `useQuery` for fetching data:
+  - Fetch the `events` list using `useQuery` instead of your custom hook
+  - Notice how `React Query` manages loading and error states for you
+- Use `useMutation` for modifying data:
+  - Creating a new `event`
+  - Editing an existing `event`
+  - Deleting an `event`
+- After each mutation, invalidate the relevant queries so the UI stays in sync with the server
+- Add a visible loading indicator while data is being fetched
+- Implement optimistic updates for at least one mutation (e.g. deleting an `event` should immediately remove it from the table before the server confirms)
+
+---
+
+## <a id="level-12"></a> LEVEL 12 – STORE (REDUX)
 
 `Stores` in `React` are very important, they allow us to access states on a **global** level in our system. Supposed we have a state that is used all over the system, such as the `connected user`, instead of having to pass it every time into every component, or just across many components just to access it somewhere down the line, we can create a `store` that will, to no surprise, store the information and access it anywhere.   
 Another thing we can do with `stores`, is that we can add functions that we call to update the `store's` data, and using those functions we can do that any time it's called, the same common behavior will happen. For example, if we store the user's birth date, we can do that automatically every time we call the function to update it, it also updates the age field, and also calls the `backend` to update it.
@@ -245,14 +273,13 @@ Another thing we can do with `stores`, is that we can add functions that we call
 TODO:
 
 - Read about `Redux` and add a store to your system that will hold the information of the `connected user`
-- Create a store that will hold some of the `events`, think what is the most accurate way to do it while keeping in mind the warning above
 
 ---
 
-## <a id="level-12"></a> LEVEL 12 – CONTEXT
+## <a id="level-13"></a> LEVEL 13 – CONTEXT
 
 In `React`, we have special `Providers` that are called `Contexts Providers`, which allow us to wrap components and have states that can be used from anywhere within those components.  
-As you might have realized, our `Store` from [`level 11`](#level-11) is also a type of `context`.
+As you might have realized, our `Store` from [`level 12`](#level-12) is also a type of `context`.
 
 In order to use a `context`, we need to wrap the components we want with it's `provider`.  
 When creating the provider, we can also add components that will automatically be added when we call it. For example, if we were to add a `Light-Dark Mode Provider`, we can add that it will automatically add a button to switch between the modes on the bottom-right of the screen.
