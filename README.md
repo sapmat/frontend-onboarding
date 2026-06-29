@@ -1,26 +1,51 @@
 # Frontend Onboarding
 
-Welcome!
+**Welcome to your frontend onboarding!**
 
 This exercise is designed to introduce you step-by-step to the fundamentals of frontend development!
 
 > [!NOTE]
->
-> - This does not cover everything about frontend development, but it will give you enough understanding to begin creating your own features and improving independently
-> - This is just exercises to learn how to develop from a more hands on point of view, if you want more in depth explanation feel free to do your own research
+> - This won't cover everything there is to know in frontend development — but it will give you enough foundation to start building features and growing independently.
+> - These are hands-on exercises focused on practical development. For deeper explanations, feel free to research on your own.
 
 > [!IMPORTANT]
->
-> This exercise is meant to be completed using the `React` framework
-> If you choose to work with another framework such as `Vue` or `Angular`, make sure you understand the equivalent concepts and how to implement them there
+> This exercise is meant to be completed using the `React` framework.
+> If you choose to work with another framework such as `Vue` or `Angular`, make sure you understand the equivalent concepts and how to implement them there.
 
 > [!NOTE]
+> Don't worry — with time and practice, these concepts will become second nature.
 >
-> Don't worry, with time and experience you will grow to have a natural feel for everything that you practice here and learn more about frontend development and that it's not that scary
+> Frontend development is way more fun and enjoyable than people think.
 
 ---
 
-## LEVELS NAVIGATION
+## Overview
+
+In this project, you will build a single project and expand it step by step through the levels below. Each level builds on the previous ones — stick to concepts introduced in the current level or earlier.
+
+> [!NOTE]
+> If you need a reference along the way, the official [react.dev Learn](https://react.dev/learn) guide is a great place to start.
+
+---
+
+## Tech Stack
+
+You will use the following throughout this exercise:
+
+- **React** (function components only)
+- **TypeScript**
+- **Vite** (project bootstrapping and dev server)
+- **Emotion** (CSS-in-JS — keep styles in dedicated `styles.ts` files)
+- **React Router** (routing)
+- **React Query** (server state management and data fetching)
+- **MobX** (global state management)
+
+> [!WARNING]
+> Maintain basic responsiveness all throughout your project. You won't be tested heavily on it, but layouts should not break on common screen sizes.
+
+---
+
+## Levels
 
 - [Level 1 – Components & Inputs](#level-1)
 - [Level 2 – State & Effects](#level-2)
@@ -39,11 +64,9 @@ This exercise is designed to introduce you step-by-step to the fundamentals of f
 ---
 
 > [!WARNING]
->
 > Make sure that stuff are responsive to some extent, you will not be tested on it too much because you will not be using any special UI libraries that will help, but do make sure that it has a basic responsively
 
 > [!NOTE]
->
 > When solving a level, only use what you have learned from previous levels
 
 ---
@@ -123,7 +146,6 @@ Tasks:
 3. If the user is not logged in, automatically redirect him to the `Login` page.
 
 > [!NOTE]
->
 > Think carefully about what data should and should not be stored client-side.
 > Think carefully about where that data should be saved.
 
@@ -155,7 +177,6 @@ Normally, projects have a backend and database, which hold and provide all the d
 Since we are not using either right now, we will practice creating and using a mock API which will fill the role of both.
 
 > [!NOTE]
->
 > This is a common pattern — building frontend features before the backend is ready.  
 > Remember to keep your mock simple — it only needs to provide usable data to your UI.
 
@@ -199,7 +220,6 @@ Here we will practice creating our own custom hooks.
 `React Query` handles all of this for us, providing features like automatic caching, background re-fetching, stale data management, and optimistic updates — without having to write all that logic manually.
 
 > [!NOTE]
->
 > - `React Query` replaces the need for most custom data-fetching hooks and manual loading/error state management
 > - It is not a replacement for `MobX` — `MobX` handles client/global state, while `React Query` handles server/remote state
 
@@ -237,7 +257,6 @@ In our case, we will create a table that will display the `events` and their inf
 5. Add a `Clear` button to reset all filters.
 
 > [!NOTE]
->
 > Consider carefully what events should be shown.
 
 ---
@@ -271,11 +290,9 @@ Stores in `React` are very important — they allow us to access state on a glob
 Another thing we can do with stores is add functions that we call to update the store's data, and using those functions we can do that any time it's called, the same common behavior will happen. For example, if we store the user's birth date, we can do that automatically every time we call the function to update it, it also updates the age field, and also calls the backend to update it.
 
 > [!WARNING]
->
 > Stores are not meant to hold heavy data. Only put state that is genuinely needed across multiple unrelated components.
 
 > [!NOTE]
->
 > You can have multiple stores — each should focus on a single, well-defined purpose.
 
 **Tasks:**
